@@ -162,7 +162,8 @@
 
         let tweet_data = item_content['tweet_results']['result'];
         if(blf_settings.hide_promote && key_exists(item_content, 'promotedMetadata')) {
-            hide_tweet(item_content['tweet_results'], false, 'Hidden Ad');
+            //hide_tweet(item_content['tweet_results'], false, 'Hidden Ad');
+            delete item_content['tweet_results'];
         }
 
         // tweets of type 'TweetWithVisibilityResults' have a slightly different format we need to parse
